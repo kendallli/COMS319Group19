@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Song Order Preferences" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/mp_shuffle_pref"
+            android:summary="play songs in random order"
+            android:title="Shuffle" />
+        <CheckBoxPreference
+            android:key="@string/loopPlay"
+            android:title="Solo Loop Play"
+            android:defaultValue="false"
+            android:summary=""/>
+    </PreferenceCategory> 
+    <PreferenceCategory android:title="Play Preferences" >
+      <!--
+        <MultiSelectListPreference 
+            android:title="Volume"
+           	android:key="@string/ValueOfVolume" 
+           	android:entryValues="@array/VolumeArray" 
+           	android:entries="@array/VolumeOption" 
+           	android:defaultValue="@array/empty_array"/>
+        <SwitchPreference />
+         <EditTextPreference android:summary="Input 1-100" android:key="@string/ValueOfVolume" android:title="Volume Input" android:defaultValue="@string/ValueOfVolume"/>
+         -->
+        <ListPreference android:key="volume_setting" android:entryValues="@array/pref_volume_values" android:defaultValue="50" android:title="Volume Setting" android:entries="@array/pref_volume_entries"/>
+    </PreferenceCategory>
+</PreferenceScreen>
